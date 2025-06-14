@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Para Meu Amor</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #000;
+      color: white;
+      font-family: 'Georgia', serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      overflow: hidden;
+      text-align: center;
+    }
+    h1 {
+      color: red;
+    }
+    #chest {
+      width: 150px;
+      height: 150px;
+      background: url('baú.jpg') center/contain no-repeat;
+      cursor: pointer;
+      margin-top: 30px;
+      transition: transform 0.5s ease-in-out;
+    }
+    #chest.open {
+      transform: scale(1.1) rotate(-2deg);
+    }
+    #love-text {
+      display: none;
+      max-width: 90vw;
+      max-height: 70vh;
+      overflow-y: auto;
+      margin-top: 20px;
+      padding: 20px;
+      background-color: white;
+      color: black;
+      border-radius: 10px;
+    }
+    audio {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>Para Meu Amor</h1>
+  <p>Com amor, Mica. Pelo nosso 4º dia dos namorados. ❤️</p>
+
+  <div id="chest" title="Clique para abrir o baú"></div>
+
+  <div id="love-text">
+    <p>Meu amor, este é o nosso quarto dia dos namorados juntos e eu não poderia estar mais apaixonada por você. Gostaria de afirmar, com uma certeza que eu nunca tive sobre nenhuma outra coisa, que quero dividir a minha vida com você, sonhar com você, mudar de casa, de vida, realizar planos que hoje parecem inalcançáveis, envelhecer e morrer <strong>com você</strong>. Estou disposta a rasgar e queimar qualquer tensão e qualquer dúvida que possa haver em relação a nós, construir uma relação cada vez mais pautada no amor, na certeza, no respeito, na admiração e no orgulho mútuo. Sou fã de cada detalhe da sua existência, como o sorriso que você dá enquanto dorme e sonha com coisas sem sentido, aquele que você mostra quando me vê saindo do prédio da faculdade e aquele que compartilhamos na mesma intensidade. Amo a sua caligrafia, que mistura maiúsculas e minúsculas de um jeito só seu e não se permite confundir com nenhuma outra. O seu jeito de me fazer rir quando estou com raiva, esquecendo o motivo que me aborrecia. O jeito como você me olha e me deseja, sem se importar com as circunstâncias, o estado da minha aparência ou o seu cansaço. Me sinto feliz diariamente por ter alguém com quem compartilhar os melhores e os piores memes possíveis, alguém com quem dividir as ideias mais profundas, as mais bobas e as mais controversas, sem medo de julgamento. Te amo, entre outras coisas, porque posso ser a versão mais espontânea de mim mesma quando estou ao seu lado. Te amo exatamente como você é e te amo principalmente por ser você.</p>
+  </div>
+
+  <audio id="music" src="WhatsApp Audio 2025-06-13 at 20.28.24.mp3"></audio>
+
+  <script>
+    const chest = document.getElementById('chest');
+    const text = document.getElementById('love-text');
+    const music = document.getElementById('music');
+
+    chest.addEventListener('click', () => {
+      chest.classList.add('open');
+      text.style.display = 'block';
+      music.play();
+    });
+  </script>
+</body>
+</html>
